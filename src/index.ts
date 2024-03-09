@@ -1,11 +1,10 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import SimplexApp from "./simplex-app";
 
-import confetti from 'canvas-confetti';
+function main() {
+  const inputTable = document.querySelector(".inputTable");
+  if(!inputTable) throw new Error("No input table");
+  const app = new SimplexApp(5, inputTable as HTMLElement);
+  setTimeout(() => app.numberOfVariables = 6, 2000);
+}
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+main();

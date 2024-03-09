@@ -1,14 +1,49 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px
+}
+
+.title {
+  margin: 10px 0px;
+}
+
+select#functionType {
+  padding: 2px;
+}
+
+.objectiveFunction {
+  display: flex;
+  gap: 5px;
+}
+
+.objectiveFunctionMembers {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.objectiveFunctionMember {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 35px;
+  height: 35px;
 }
